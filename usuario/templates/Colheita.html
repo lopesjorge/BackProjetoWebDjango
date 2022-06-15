@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lista de Colheita</title>
+</head>
+<body>
+            <h3>Lista de Colheita</h3>
+    <ul>
+        {% for Colheita in colheita %}
+            <a href="{% url 'update_Colheita' Colheita.id %}" style="text-decoration: none">
+                <li style="color:black; list-style-type: decimal;"> {{ Colheita.Tipo}}</li>
+            </a>
+        {% endfor %}
+    </ul>
+
+    <a href="{% url 'create_Colheita' %}" style="text-decoration: none; ">Nova Colheita</a>
+</body>
+</html>

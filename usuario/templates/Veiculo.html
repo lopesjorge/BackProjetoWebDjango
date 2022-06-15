@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lista de Veiculos</title>
+</head>
+<body>
+            <h3>Lista de Veiculos</h3>
+    <ul>
+        {% for Veiculo in veiculo %}
+            <a href="{% url 'update_Veiculo' Veiculo.id %}" style="text-decoration: none">
+                <li style="color:black; list-style-type: decimal;"> {{ Veiculo.Modelo}}</li>
+            </a>
+        {% endfor %}
+    </ul>
+
+    <a href="{% url 'create_Veiculo' %}" style="text-decoration: none; ">Novo Veículo</a>
+</body>
+</html>

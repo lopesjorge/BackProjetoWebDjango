@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lista de Endereços</title>
+</head>
+<body>
+            <h3>Lista de Endereços</h3>
+    <ul>
+        {% for Endereco in endereco %}
+            <a href="{% url 'update_Endereco' Endereco.id %}" style="text-decoration: none">
+                <li style="color:black; list-style-type: decimal;"> {{ Endereco.Cidade}}</li>
+            </a>
+        {% endfor %}
+    </ul>
+
+    <a href="{% url 'create_Endereco' %}" style="text-decoration: none; ">Novo Endereço</a>
+</body>
+</html>
